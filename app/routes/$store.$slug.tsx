@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   Flex,
+  Heading,
   Image,
   Input,
   InputGroup,
@@ -233,7 +234,6 @@ export default function Checkout() {
 
   const { count, handleIncrement, handleDecrement, handleChange } =
     useCounter(limit);
-  console.log('count', count);
 
   // update new
 
@@ -342,7 +342,7 @@ export default function Checkout() {
     ?.variantOptionValues[0]?.price as number;
 
   const priceTotal = isTotal * count;
-  const totalCiel = Math.ceil(priceTotal / 1000) * 1000;
+  const totalCiel = priceTotal;
 
   const total = totalCiel + uniqueNumber;
   let totalValue = 0;
@@ -357,11 +357,6 @@ export default function Checkout() {
 
   return (
     <>
-      <CheckoutDescription
-        image={item?.attachments ? item?.attachments[0]?.url : ''}
-        name={item?.name}
-        description={item?.description}
-      />
       <Box display={'flex'} flexDir={'column'} alignItems={'center'}>
         <Box display={'none'}>
           <Text>{store}</Text>
@@ -381,6 +376,12 @@ export default function Checkout() {
             </ModalCheckout>
           </Modal>
         </Box>
+        <Heading>Welcome to {item.store.name}</Heading>
+        <CheckoutDescription
+          image={item?.attachments}
+          name={item?.name}
+          description={item?.description}
+        />
         <Box
           display={'flex'}
           flexDirection={'column'}
