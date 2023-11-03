@@ -86,7 +86,7 @@ export default function NewOrderHooks() {
       const baseUrl = 'https://api.biteship.com';
       const endpoint = '/v1/orders';
       const apiKey =
-        'biteship_test.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQklURVNISVBfQVBJX0tFWSIsInVzZXJJZCI6IjY0ZjUyNjIyMzljOTljM2QyODQwOTAzYyIsImlhdCI6MTY5ODcyNTA1MH0.U_wAo-g4nDcAg9G0g9YAmmlI7ENCVM9ESV8WPKLljAk';
+        'biteship_test.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZWFubm95IiwidXNlcklkIjoiNjU0NDYxMzZmZjZlZmYyZWVlNmY1YjJkIiwiaWF0IjoxNjk4OTgwMjc1fQ.EsIo03SxU0qLelhQw1coCmm418fOJLx0EKuefjuGPxw';
 
       const dataforBiteShip = {
         shipper_contact_name: 'TESTERKU #01',
